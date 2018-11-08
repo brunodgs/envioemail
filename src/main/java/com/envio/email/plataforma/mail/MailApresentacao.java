@@ -38,7 +38,7 @@ public class MailApresentacao {
 			MimeMessageHelper helper = new MimeMessageHelper(mail, true, "UTF-8");
 			mail.addRecipients(Message.RecipientType.BCC, InternetAddress.parse("destinatario@destinatario.com"));
 			helper.setSubject("Envio de email");
-			helper.setText("Hello Word");
+			helper.setText("Hello World");
 			helper.addInline("insta", new ClassPathResource("static/img/insta.png"));
 			helper.addInline("face", new ClassPathResource("static/img/facebook.png"));
 			mailSender.send(mail);
